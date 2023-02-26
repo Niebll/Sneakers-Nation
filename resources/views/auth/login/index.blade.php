@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="{{ asset('css/auth/login/style.css') }}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-</head>
-<body>
-    <div class="con-login">
-        <div class="imagelogin">
-            <img src="{{ asset('images/auth/IMG-LOG.png') }}" alt="login" class="img-log">
-         </div>  
-        <form action="{{ route('login') }}" method="post">
-            @csrf
-            <h1 class="title-log">Login</h1>
-            <p class="ket-log">Belom punya akun? <span><a href="#">Buat akun</a></span></p>
-            <p class="ket-input-email">Email</p>
-            <input type="text" name="email" placeholder="email" class="input-email">
-            <p class="ket-input-password">Password</p>
-            <input type="password" name="password" placeholder="password" class="input-password">
-            <button type="submit" class="btn-submit">Login</button>
-        </form>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/auth/login/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css" />
+  </head>
+  <body>
+    <div class="body-kiri">
+      <img src="images/auth/side-login.png" alt="" />
     </div>
-</body>
+    <div class="body-kanan">
+      <img src="images/auth/Sneakers-Nations-Logo.png" alt="" />
+      <center>
+        <form action="" class="form">
+          <h2 class="signin">SIGN IN</h2>
+          <input type="email" name="email" class="box" placeholder="Enter Email" />
+          <input type="password" name="password" class="box" placeholder="Enter Password" />
+          <input type="submit" value="SIGN IN" id="submit" />
+        </form>
+      </center>
+    </div>
+  </body>
 </html>
