@@ -26,9 +26,13 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register')-
 Route::post('/register', [RegisterController::class, 'store'])->name('register')->middleware("guest");
 
 // route for index page
-Route::get('/home', function () {
-    return view('index');
-})->middleware('auth');
+// Route::get('/home', function () {
+//     return view('index');
+// })->middleware('auth');
 
 // route for logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/home', function () {
+    return view('guest.home.index');
+});
